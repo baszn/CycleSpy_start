@@ -1,3 +1,6 @@
 [submodule "cyclespy"]
 	path = cyclespy
 	url = git@github.com:baszn/cyclespy.git
+[submodule "cyclespy_files/libopencm3"]
+	path = cyclespy_files/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
