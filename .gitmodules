@@ -1,0 +1,3 @@
+[submodule "cyclespy"]
+	path = cyclespy
+	url = git@github.com:baszn/cyclespy.git
