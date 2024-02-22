@@ -1,0 +1,1 @@
+This directory will be used to save generated assembly. Generated assembly can be saved with AsmFileCreator.save().
