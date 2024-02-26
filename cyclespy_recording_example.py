@@ -72,8 +72,8 @@ if __name__ == '__main__':
     (same for the very first and the very last instruction). The parameter 'overlap_ins=True' handles this for you.
     """
 
-    # Import test files if they already exists
-    asm_files = AsmFile.import_parts_by_name(test_name, function_name, 7)
+    # Import files if they already exists, this function will also consider files split in parts
+    asm_files = AsmFile.find_by_name(test_name, function_name)
 
     # Otherwise create them
     if len(asm_files) == 0:
