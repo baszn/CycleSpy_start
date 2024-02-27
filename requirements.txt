@@ -1,0 +1,7 @@
+numpy >= 1.26.4
+tqdm >= 4.66.1
+pandas >= 2.2.0
+pyocd >= 0.36.0
+# Capstone 5.0.1 contains a bug that results in broken operand information:
+# https://github.com/capstone-engine/capstone/issues/2144
+capstone >= 4.0.2, !=5.0.1
