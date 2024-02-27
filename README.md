@@ -7,16 +7,16 @@ This documentation is mainly written for either Ubuntu or Mac. Windows and other
 
 For Mac it is recommended that the package manager 'brew' is installed.
 
-> ***Requirements:***
-> - Python 3.8+
-> - Git (recommended, often already installed on Ubuntu/Mac)
-> - Make (only for compiling, often already installed on Ubuntu/Mac)
-> - gcc-arm-none-eabi or gcc-arm-embeded (only for compiling, see installation instructions below)
+### Requirements:
+- Python 3.8+
+- Git (recommended, often already installed on Ubuntu/Mac)
+- Make (only for compiling, often already installed on Ubuntu/Mac)
+- gcc-arm-none-eabi or gcc-arm-embeded (only for compiling, see installation instructions below)
 
-> **Supported microcontrollers:**
->  *Only Cortex-M3 and Cortex-M4 microcontrollers are supported by CycleSpy at the moment*
->  - For testing: [PyOCD target support](https://pyocd.io/docs/target_support.html)
->  - For compiling: [LibOpenCM3 support](https://github.com/libopencm3/libopencm3?tab=readme-ov-file#readme)
+ **Supported microcontrollers:**
+  *Only Cortex-M3 and Cortex-M4 microcontrollers are supported by CycleSpy at the moment*
+  - For testing: [PyOCD target support](https://pyocd.io/docs/target_support.html)
+  - For compiling: [LibOpenCM3 support](https://github.com/libopencm3/libopencm3?tab=readme-ov-file#readme)
 ### Clone the project
 
 #### Git (recommended)
@@ -158,8 +158,10 @@ LibOpenCM3 simplifies the process of compiling for different microcontrollers by
 
 ### FAQ
 **Q: I get the following error:**
-``` diff
-- pyocd.core.exceptions.TargetSupportError: Target type <target> not recognized. Use 'pyocd list --targets' to see currently available target types. See <https://pyocd.io/docs/target_support.html> for how to install additional target support.
+``` 
+pyocd.core.exceptions.TargetSupportError: Target type <target> not recognized. 
+Use 'pyocd list --targets' to see currently available target types. 
+See <https://pyocd.io/docs/target_support.html> for how to install additional target support.
 ```
 
 A: The target is automatically recognised, but PyOCD doesn't have the correct 'pack' installed that has the required information in it to start a session with this target. To solve this, open a terminal and type:
@@ -181,9 +183,10 @@ https://pyocd.io/docs/target_support.html
 
 **Q: I get the following error:**
 
-``` diff
-- ./cyclespy_start/cyclespy_files/libopencm3/mk/genlink-config.mk:65: ./cyclespy_start/cyclespy_files/libopencm3/lib/libopencm3_stm32f1.a library variant for the selected device does not exist.
-
+```
+./cyclespy_start/cyclespy_files/libopencm3/mk/genlink-config.mk:65: 
+./cyclespy_start/cyclespy_files/libopencm3/lib/libopencm3_stm32f1.a 
+library variant for the selected device does not exist.
 ```
 
 A:
