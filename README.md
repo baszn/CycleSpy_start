@@ -18,6 +18,34 @@ For Mac it is recommended that the package manager 'brew' is installed.
   *Only Cortex-M3 and Cortex-M4 microcontrollers are supported by CycleSpy at the moment*
   - For recording: [PyOCD target support](https://pyocd.io/docs/target_support.html)
   - For compiling: [LibOpenCM3 support](https://github.com/libopencm3/libopencm3?tab=readme-ov-file#readme)
+
+### Quick install
+Go to the directory where you want to clone the files and run the following commands.
+
+
+Ubuntu:
+```bash
+$ sudo apt install gcc-arm-none-eabi make python3 git
+$ git clone --recursive git@github.com:baszn/cyclespy_start.git
+$ pip3 install -r requirements.txt
+$ cd ./cyclespy_files/libopencm3
+$ make
+$ cd ..
+# To run, connect a supported microcontroller and execute:
+$ python3 cyclespy_recording_example.py
+```
+Mac:
+```zsh
+% brew install gcc-arm-embedded make python3 git
+% git clone --recursive git@github.com:baszn/cyclespy_start.git
+% pip3 install -r requirements.txt
+% cd ./cyclespy_files/libopencm3
+% make
+% cd ..
+# To run, connect a supported microcontroller and execute:
+% python3 cyclespy_recording_example.py
+```
+
 ### Clone the project
 
 #### Git (recommended)
