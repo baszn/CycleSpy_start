@@ -14,8 +14,9 @@ For Mac it is recommended that the package manager 'brew' is installed.
 - gcc-arm-none-eabi or gcc-arm-embeded (only for compiling, see installation instructions below)
 
  **Supported microcontrollers:**
+
   *Only Cortex-M3 and Cortex-M4 microcontrollers are supported by CycleSpy at the moment*
-  - For testing: [PyOCD target support](https://pyocd.io/docs/target_support.html)
+  - For recording: [PyOCD target support](https://pyocd.io/docs/target_support.html)
   - For compiling: [LibOpenCM3 support](https://github.com/libopencm3/libopencm3?tab=readme-ov-file#readme)
 ### Clone the project
 
@@ -156,7 +157,7 @@ LibOpenCM3 simplifies the process of compiling for different microcontrollers by
 
 > Note that not every microcontroller is supported by LibOpenCM3. The supported models can be found on the [Github page of LibOpenCM3](https://github.com/libopencm3/libopencm3?tab=readme-ov-file#readme).
 
-### FAQ
+## FAQ
 **Q: I get the following error:**
 ``` 
 pyocd.core.exceptions.TargetSupportError: Target type <target> not recognized. 
@@ -180,6 +181,8 @@ $ pyocd pack install <target_name>
 
 For more info see:
 https://pyocd.io/docs/target_support.html
+
+---
 
 **Q: I get the following error:**
 
