@@ -34,7 +34,7 @@ $ git clone --recursive https://github.com/baszn/cyclespy_start.git
 ```
 
 #### Download directly
-It's also possible to download the files directly from Github, but this will not automatically download the required submodules. The contents of the following repositories need to be placed in the right directories:
+It's also possible to download the files directly from Github, but this will not automatically download the required submodules. The contents of the following repositories needs to be placed in the right directories:
 
 ```
 ./cyclespy/ -> https://github.com/baszn/cyclespy/
@@ -50,23 +50,26 @@ $ pip -r install requirements.txt
 ```
 
 ### Install gcc-arm
-When compiling assembly files into an executable elf, it's required to have *Make* and the ARM GCC compiler installed.
+When compiling assembly files into an executable elf, it's required to have *Make* and the *ARM-gcc* compiler installed.
 
 **Make**
-*Make* is often already installed on Ubuntu and Mac. To check type 'make' into a terminal and the output should be something like this:
-```
+
+_Make_ is often already installed on Ubuntu and Mac. To check type 'make' into a terminal and the output should be something like this:
+
+```bash
 make: *** No targets specified and no makefile found.  Stop.
 ```
 
-Otherwise you can install it with with either apt-get or brew:
+Otherwise you can install *Make* with either apt-get or brew:
 
 ```
 $ sudo apt-get install make
 % brew install make
 ```
 
-**ARM GCC**
-CycleSpy uses the ARM GCC compiler to compile the assembly files into .elf files. To install this compiler run the following commands:
+**ARM-gcc**
+
+CycleSpy uses the ARM variant of the _gcc_ compiler to compile the assembly files into .elf files. To install this compiler run the following commands:
 
 ```bash
 # Ubuntu
@@ -82,18 +85,21 @@ $ cd ./cyclespy_files/libopencm3
 $ make
 ```
 
-This will build files for every supported device. Building doesn't take that long so it's often not necessary to limit the build to certain devices, but if you want to see the documentation of [LibOpenCM3](https://github.com/libopencm3/libopencm3?tab=readme-ov-file#building).
+This will build files for every supported device. Building doesn't take that long so it's often not necessary to specify certain devices, but if you want to see the documentation of [LibOpenCM3](https://github.com/libopencm3/libopencm3?tab=readme-ov-file#building).
 
-## Template files
-The template files are the starting point of using/learning about CycleSpy. These template files contain comments that explain what each code segment does.
+## Example files
+The example files are the starting point of using/learning about CycleSpy. These example files contain comments that explain what each code segment does.
 
 ***cyclespy_recording_example.py*** 
-Creates assembly test files, compiles them, flash them om the connected microcontroller and saves the results into the `./cyclespy_files/results` directory. Should be able to run without any modification when a microcontroller is connected and LibOpenCM3 and PyOCD are setup correctly.
+
+Creates assembly test files, compiles them, flash them om the connected microcontroller and saves the results to the `./cyclespy_files/results` directory. Should be able to run without any modification when a microcontroller is connected and LibOpenCM3 and PyOCD are setup correctly.
 
 ***cyclespy_verify_example.py*** 
+
 Example of how to verify the results with the verifier. Only Cortex-M3 results are supported at the moment.
 
 ***recording_example_no_comments.py*** 
+
 Same as *cyclespy_recording_example.py* but without comments.
 
 ## Used libraries
